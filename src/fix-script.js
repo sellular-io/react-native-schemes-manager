@@ -29,7 +29,7 @@ function updateProject (project) {
 				.map((key) => [key, env[key]])
 				.map(([key, value]) => `export ${key}=${value}`);
 
-			const runCommand = `${nodeCommand}../node_modules/react-native-schemes-manager/lib/react-native-xcode.sh`;
+			const runCommand = `../node_modules/react-native-schemes-manager/lib/react-native-xcode.sh ${nodeCommand}`;
 
 			const commands = [
 				...exports,
